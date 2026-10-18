@@ -19,7 +19,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # Only the site is published: the demo page, the stylesheet, the hosted
       # images and public/. sync.py, icons.txt and the README stay in the repo.
