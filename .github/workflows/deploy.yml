@@ -32,7 +32,7 @@ jobs:
           cp -r images dist/images
           cp -r public/. dist/
 
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
