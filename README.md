@@ -80,30 +80,18 @@ Where you can't add CSS, link a single state directly:
 [![GitHub](https://ianskelskey.github.io/tiny-pixel-social-buttons/images/x3/normal/github.png)](https://github.com/IanSkelskey)
 ```
 
-## What's published
+## Files
 
-| Path                                  | What it is                                                   |
-| ------------------------------------- | ------------------------------------------------------------ |
-| `tiny-socials.css`                    | The stylesheet for hover/pressed buttons                     |
-| `images/sprites/<name>.png`           | 16x48: normal, hover and pressed stacked (used by the CSS)   |
-| `images/x1/<state>/<name>.png`        | 16x16 originals; `<state>` is `normal`, `hover` or `pressed` |
-| `images/x3/<state>/<name>.png`        | 48x48, scaled nearest-neighbour so they stay crisp           |
-| `images/outlined/…`                   | Everything under `images/` again, in the outlined style      |
-| `index.html`                          | The live demo                                                |
+| Path                           | What it is                                                   |
+| ------------------------------ | ------------------------------------------------------------ |
+| `tiny-socials.css`             | The stylesheet for hover/pressed buttons                     |
+| `images/sprites/<name>.png`    | 16x48: normal, hover and pressed stacked (used by the CSS)   |
+| `images/x1/<state>/<name>.png` | 16x16 originals; `<state>` is `normal`, `hover` or `pressed` |
+| `images/x3/<state>/<name>.png` | 48x48, scaled nearest-neighbour so they stay crisp           |
+| `images/outlined/…`            | Everything under `images/` again, in the outlined style      |
+| `index.html`                   | The live demo                                                |
 
-Image paths mirror the full pack's own folders, so a file's URL follows from its name in the pack.
-
-## Setup and updating
-
-The site is deployed by [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) on every push to `main`, with **Settings → Pages → Source: GitHub Actions**. Only the files above are published, plus `public/` (the social preview and `robots.txt`).
-
-`sync.py` copies the icons listed in `icons.txt` out of a release of the full pack and regenerates the sprites and stylesheet:
-
-```
-python sync.py "G:/My Drive/Visual Arts/Itch Asset Packs/mini-social-pack/v2.0/content"
-```
-
-To host another icon, add its name to `icons.txt`, run it again and push. Icon names never change between releases of the pack, so published URLs keep working.
+Every push to `main` redeploys the site through [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
 
 ## Want the rest?
 
