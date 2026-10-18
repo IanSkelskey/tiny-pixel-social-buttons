@@ -1,0 +1,11 @@
+# The deploy workflow's output; build it locally to preview the published site.
+dist
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor directories and files
+.vscode/
+.idea
+.DS_Store

@@ -1,0 +1,48 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Allow one concurrent deployment; skip runs in progress but queue the latest.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Only the site is published: the demo page, the stylesheet, the hosted
+      # images and public/. sync.py, icons.txt and the README stay in the repo.
+      # Every URL in the site is relative, so unlike a Vite build there is no
+      # base path to resolve: it works as a project page or a user page alike.
+      - name: Assemble site
+        run: |
+          mkdir dist
+          cp index.html tiny-socials.css dist/
+          cp -r images dist/images
+          cp -r public/. dist/
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

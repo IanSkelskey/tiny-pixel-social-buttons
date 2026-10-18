@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#222034">
+  <meta name="description" content="The Tiny Pixel Social Buttons I use across my sites: 16x16 pixel art buttons with hover and pressed states, hosted on GitHub Pages.">
+  <title>Tiny Pixel Social Buttons</title>
+
+  <!--
+    Social + SEO metadata. og:image and og:url have to be absolute: a scraper
+    has no page to resolve a relative path against. public/og-image.png is the
+    same 1280x640 image as the repository's GitHub social preview.
+  -->
+  <link rel="canonical" href="https://ianskelskey.github.io/tiny-pixel-social-buttons/">
+  <!-- Open Graph (Facebook, LinkedIn, Discord, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tiny Pixel Social Buttons">
+  <meta property="og:description" content="16x16 pixel art social buttons with hover and pressed states, hosted on GitHub Pages.">
+  <meta property="og:url" content="https://ianskelskey.github.io/tiny-pixel-social-buttons/">
+  <meta property="og:image" content="https://ianskelskey.github.io/tiny-pixel-social-buttons/og-image.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta property="og:image:alt" content="Tiny Pixel Social Buttons: the title above a row of eight pixel art social buttons.">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tiny Pixel Social Buttons">
+  <meta name="twitter:description" content="16x16 pixel art social buttons with hover and pressed states, hosted on GitHub Pages.">
+  <meta name="twitter:image" content="https://ianskelskey.github.io/tiny-pixel-social-buttons/og-image.png">
+
+  <link rel="stylesheet" href="tiny-socials.css">
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      margin: 0;
+      padding: 32px 16px;
+      background: #222034;
+      color: #e8e4f0;
+      font: 16px/1.5 system-ui, sans-serif;
+    }
+    main { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 1.5rem; margin: 0 0 4px; }
+    h2 { font-size: 1rem; margin: 32px 0 8px; color: #b8b0c8; font-weight: 600; }
+    p { margin: 0 0 8px; }
+    a { color: #ff6a95; }
+    .row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+    code { font: 14px/1.4 ui-monospace, monospace; color: #ffd166; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Tiny Pixel Social Buttons</h1>
+  <p>The buttons I use across my sites, hosted here so every site shares the same files. Hover and click them.
+    The full pack of 30 is on <a href="https://ianskelskey.itch.io/tiny-pixel-social-buttons">itch.io</a>;
+    usage is in the <a href="https://github.com/IanSkelskey/tiny-pixel-social-buttons">README</a>.</p>
+
+  <h2>Original</h2>
+  <div class="row">
+    <a class="tps tps-github" href="https://github.com/IanSkelskey" aria-label="GitHub"></a>
+    <a class="tps tps-linkedin" href="#" aria-label="LinkedIn"></a>
+    <a class="tps tps-deviantart" href="#" aria-label="deviantArt"></a>
+    <a class="tps tps-youtube" href="#" aria-label="YouTube"></a>
+    <a class="tps tps-instagram" href="#" aria-label="Instagram"></a>
+    <a class="tps tps-itch" href="https://ianskelskey.itch.io" aria-label="itch.io"></a>
+    <a class="tps tps-lexaloffle" href="#" aria-label="Lexaloffle"></a>
+    <a class="tps tps-lospec" href="https://lospec.com/ianskelskey" aria-label="Lospec"></a>
+  </div>
+
+  <h2>Outlined: add <code>tps-outlined</code></h2>
+  <div class="row">
+    <a class="tps tps-outlined tps-github" href="https://github.com/IanSkelskey" aria-label="GitHub"></a>
+    <a class="tps tps-outlined tps-linkedin" href="#" aria-label="LinkedIn"></a>
+    <a class="tps tps-outlined tps-deviantart" href="#" aria-label="deviantArt"></a>
+    <a class="tps tps-outlined tps-youtube" href="#" aria-label="YouTube"></a>
+    <a class="tps tps-outlined tps-instagram" href="#" aria-label="Instagram"></a>
+    <a class="tps tps-outlined tps-itch" href="https://ianskelskey.itch.io" aria-label="itch.io"></a>
+    <a class="tps tps-outlined tps-lexaloffle" href="#" aria-label="Lexaloffle"></a>
+    <a class="tps tps-outlined tps-lospec" href="https://lospec.com/ianskelskey" aria-label="Lospec"></a>
+  </div>
+
+  <h2>Sizes: set <code>--tps-size</code> in multiples of 16px</h2>
+  <div class="row">
+    <a class="tps tps-outlined tps-lospec" style="--tps-size: 16px" href="https://lospec.com/ianskelskey" aria-label="Lospec"></a>
+    <a class="tps tps-outlined tps-lospec" style="--tps-size: 32px" href="https://lospec.com/ianskelskey" aria-label="Lospec"></a>
+    <a class="tps tps-outlined tps-lospec" href="https://lospec.com/ianskelskey" aria-label="Lospec"></a>
+    <a class="tps tps-outlined tps-lospec" style="--tps-size: 64px" href="https://lospec.com/ianskelskey" aria-label="Lospec"></a>
+    <a class="tps tps-outlined tps-lospec" style="--tps-size: 96px" href="https://lospec.com/ianskelskey" aria-label="Lospec"></a>
+  </div>
+</main>
+</body>
+</html>
